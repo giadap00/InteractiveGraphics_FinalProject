@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Final project</title>
+    <script type="text/javascript" src="zoom.js"></script>
+    <script type="text/javascript" src="obj1.js"></script>
+    <script type="text/javascript" id="includedscript" src="simul.js"></script>
+    <style>
+        html {
+            color: white;
+            background-color: rgb(88, 133, 179);
+            font-family: Arial;
+            overflow: hidden;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        input[type=checkbox], label {
+            cursor: pointer;
+        }
+        input[type=range] {
+            width: 100%;
+        }
+        canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #canvasContainer {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #controls-div {
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            right: 1em;
+            top: 1em;
+            width: 18em;
+            z-index: 10;
+        }
+        #controls {
+            padding: 1em;
+        }
+        .control {
+            padding: 0.2em;
+            clear: both;
+        }
+        .val {
+            float: right;
+            text-align: right;
+        }
+        .value {
+            margin-right: 0.5em;
+        }
+        .btn {
+            width: 100%;
+        }
+        #buttons {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 20;
+        }
+        #buttons input[type=button] {
+            background-color: rgba(80,80,80,0.5);
+            color: #aaa;
+            font-size: 70%;
+            outline: none;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        
+        .tab button {
+            background-color: #333;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 23.9px;
+            transition: 0.3s;
+        }
+        
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+    </style>
+</head>
+<body onresize="WindowResize()">
+    <div id="canvasContainer">
+        <canvas id="canvas">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+    </div>
+    <div id="controls-div">
+        <div id="controls">
+            <div class="control-group">
+                <div class="control">
+                    <span id="count-label">Number of jellyfish:</span>
+                    <span class="val">
+                        <span class="value" id="count-value">3</span>
+                        <input type="button" value="+" onclick="IncCount(1)">
+                        <input type="button" value="&ndash;" onclick="IncCount(-1)">
+                    </span>
+                    <input id="count-range" type="range" min="1" max="100" value="3" oninput="SetCount(this.value)" onchange="NewScene()">
+                </div>
+                <div class="control">
+                    <input type="button" class="btn" value="New Random Scene" onclick="NewScene()">
+                </div> 
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'Light')">Light</button>
+                    <button class="tablinks" onclick="openTab(event, 'Animation')">Animation</button>
+                    <button class="tablinks" onclick="openTab(event, 'Fog')">Fog</button>
+                </div>
+                
+                <div id="Light" class="tabcontent">
+                    <div class="control">
+                        <label for="ambient-color">Ambient Light:</label>
+                        <input id="ambient-color" type="color" value="#000000" oninput="updateGlobalAmbient()" />
+                    </div>
+                    <div class="control">
+                        <label for="light-x">Light Direction X:</label>
+                        <input id="light-x" type="range" min="-1" max="1" step="0.1" value="0.0" oninput="updateGlobalLightDir()" />
+                    </div>
+                    <div class="control">
+                        <label for="light-y">Light Direction Y:</label>
+                        <input id="light-y" type="range" min="-1" max="1" step="0.1" value="1.0" oninput="updateGlobalLightDir()" />
+                    </div>
+                    <div class="control">
+                        <label for="light-z">Light Direction Z:</label>
+                        <input id="light-z" type="range" min="-1" max="1" step="0.1" value="-1.0" oninput="updateGlobalLightDir()" />
+                    </div>
+                </div>
+                
+                <div id="Animation" class="tabcontent">
+                    <div class="control">
+                        <label for="rotation-speed">Jellyfish's velocity:</label>
+                        <input id="rotation-speed" type="range" min="1" max="5" value="2" active />
+                    </div>
+                    <div class="control">
+                        <label for="rotation-speed">Bubble's velocity:</label>
+                        <input id="rotation-speedbubble" type="range" min="1" max="5" value="2" active />
+                    </div>
+                    <div class="control">
+                        <input id="auto-rotate" name="auto-rotate" type="checkbox" onchange="AutoRotate(this)" />
+                        <label for="auto-rotate">Animate</label>
+                    </div>
+                </div>
+                
+                <div id="Fog" class="tabcontent">
+                    <div class="control">
+                        <label for="fog-color">Fog Color:</label>
+                        <input id="fog-color" type="color" value="#C2B280" oninput="updateFogColor()" />
+                    </div>
+                    <div class="control">
+                        <label for="fog-opacity">Fog Opacity:</label>
+                        <input id="fog-opacity" type="range" min="0" max="1" step="0.01" value="1" oninput="updateFogColor()" />
+                    </div>
+                    <div class="control">
+                        <label for="fog-amount">Fog Amount:</label>
+                        <input id="fog-amount" type="range" min="0" max="1" step="0.01" value="0.0" oninput="updateFogAmount()" />
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+    <div id="buttons">
+        <input type="button" value="V" onclick="ShowControls()">
+    </div>
+
+    
+</body>
+</html>
+
