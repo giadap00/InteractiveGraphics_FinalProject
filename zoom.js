@@ -31,56 +31,57 @@ function InitWebGL()
     gl.depthFunc(gl.LEQUAL);
 	
     planeBack = new PlaneDrawer();
-	planeBack.setTexture("./sea1.jpg");
+	planeBack.setTexture("./textures/sea1.jpg");
 	planeUnder = new PlaneDrawer();
-	planeUnder.setTexture("./sabbia.jpg");
+	planeUnder.setTexture("./textures/sabbia.jpg");
 
 	
 	
-	
+	var objBubbleUrl = "./obj/bubbsph.obj";
+	var imgBubbleUrl = "./textures/bubb.png";
 	// bubble1
 	var bubble1 = new fishDrawer(0.1);
-	LoadMeshAndSetup(bubble1, "./bubbsph.obj", "./bubb.png");
+	LoadMeshAndSetup(bubble1, objBubbleUrl, imgBubbleUrl);
 	bubbleDrawers.push(bubble1);
 	tranbubble.push([-1.5, -1.3, 0, 0.05]);
 	// bubble2
 	var bubble2 = new fishDrawer(0.1);
-	LoadMeshAndSetup(bubble2, "./bubbsph.obj", "./bubb.png");
+	LoadMeshAndSetup(bubble2, objBubbleUrl, imgBubbleUrl);
 	bubbleDrawers.push(bubble2);
 	tranbubble.push([-1.5, -1, 0, 0.08]);
 	// bubble3
 	var bubble3 = new fishDrawer(0.1);
-	LoadMeshAndSetup(bubble3, "./bubbsph.obj", "./bubb.png");
+	LoadMeshAndSetup(bubble3, objBubbleUrl, imgBubbleUrl);
 	bubbleDrawers.push(bubble3);
 	tranbubble.push([-1.2, -1.2, 0, 0.08]);
 	// bubble4
 	var bubble4 = new fishDrawer(0.1);
-	LoadMeshAndSetup(bubble4, "./bubbsph.obj", "./bubb.png");
+	LoadMeshAndSetup(bubble4, objBubbleUrl, imgBubbleUrl);
 	bubbleDrawers.push(bubble4);
 	tranbubble.push([-1.7, -1.1, 0, 0.08]);
 	// bubble5
 	var bubble5 = new fishDrawer(0.1);
-	LoadMeshAndSetup(bubble5, "./bubbsph.obj", "./bubb.png");
+	LoadMeshAndSetup(bubble5, objBubbleUrl, imgBubbleUrl);
 	bubbleDrawers.push(bubble5);
 	tranbubble.push([-1.6, -0.9, 0, 0.08]);
 	// bubble6
 	var bubble6 = new fishDrawer(0.1);
-	LoadMeshAndSetup(bubble6, "./bubbsph.obj", "./bubb.png");
+	LoadMeshAndSetup(bubble6, objBubbleUrl, imgBubbleUrl);
 	bubbleDrawers.push(bubble6);
 	tranbubble.push([1.6, -0.9, 0, 0.08]);
 	// bubble7
 	var bubble7 = new fishDrawer(0.1);
-	LoadMeshAndSetup(bubble7, "./bubbsph.obj", "./bubb.png");
+	LoadMeshAndSetup(bubble7, objBubbleUrl, imgBubbleUrl);
 	bubbleDrawers.push(bubble7);
 	tranbubble.push([2.3, -1.2, 0, 0.08]);
 	// bubble8
 	var bubble8 = new fishDrawer(0.1);
-	LoadMeshAndSetup(bubble8, "./bubbsph.obj", "./bubb.png");
+	LoadMeshAndSetup(bubble8, objBubbleUrl, imgBubbleUrl);
 	bubbleDrawers.push(bubble8);
 	tranbubble.push([2.3, -1.5, 0.3, 0.08]);
 	// bubble9
 	var bubble9 = new fishDrawer(0.1);
-	LoadMeshAndSetup(bubble9, "./bubbsph.obj", "./bubb.png");
+	LoadMeshAndSetup(bubble9, objBubbleUrl, imgBubbleUrl);
 	bubbleDrawers.push(bubble9);
 	tranbubble.push([2, -0.9, 2, 0.08]);
 	
@@ -175,11 +176,11 @@ function InitWebGL()
 	tranrock.push([1, -1.25, 0, 0.35]);
 	
 	var stonePortal = new fishDrawer();
-	LoadMeshAndSetup(stonePortal, "./StonePortal1.obj", imgrock1);
+	LoadMeshAndSetup(stonePortal, "./obj/StonePortal1.obj", imgrock1);
 	rockDrawers.push(stonePortal);
 	tranrock.push([0, -0.5, 1.9, 6]);
 	var stonePortal = new fishDrawer();
-	LoadMeshAndSetup(stonePortal, "./StonePortal1.obj", imgrock1);
+	LoadMeshAndSetup(stonePortal, "./obj/StonePortal1.obj", imgrock1);
 	rockDrawers.push(stonePortal);
 	tranrock.push([0, -0.5, 1.9, 2]);
 	
@@ -187,28 +188,27 @@ function InitWebGL()
 	
 	
 	fish1 = new fishDrawer();
-    var obj1 = "medusa.obj";
-    var img1 = "medusa.jpg";
+    var obj1 = "./obj/medusa.obj";
+    var img1 = "./textures/medusa.jpg";
     LoadMeshAndSetup(fish1, obj1, img1);
     fishDrawersfissi.push(fish1);
     
 	var fixedFish = fishDrawersfissi.length;
 	for (let i = 0; i < sphereCount - fixedFish; i++) {
 		let fish = new fishDrawer();
-		let obj = "medusa.obj";
-		let img1 = "medusa.jpg";
-		let img2 = "medusa2.png";
+
+		let img2 = "./textures/medusa2.png";
 	
 		// Seleziona casualmente img1 o img2
 		let img = Math.random() < 0.5 ? img1 : img2;
 	
-		LoadMeshAndSetup(fish, obj, img);
+		LoadMeshAndSetup(fish, obj1, img);
 		fishDrawers.push(fish);
 	}
 	
 	for (var i = 0; i < fishDrawers.length; i++) {
 		var transX = Math.random() * 5 - 3;
-		var transY = Math.random() * 2 - 1;
+		var transY = Math.random() * 3 - 2;
 		var transZ = Math.random() * 2 - 1;
 		var scale = Math.random() * 2-0.5;
 		
