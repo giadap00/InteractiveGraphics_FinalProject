@@ -1,8 +1,7 @@
 var sphereCount = 3;
-var screenQuadObject;
 const transZmin = 1.001;
 const transZmax = 10;
-var viewRotX=0, viewRotZ=0, transZ=3;
+var transZ=3;
 var autorot = 0;
 var planeDrawer;
 var planeBack;
@@ -12,9 +11,8 @@ var fishDrawers;
 var tran = [];
 var tranrock = [];
 var tranbubble = [];
-
-var surf;
 var bubble;
+
 function InitWebGL()
 {
 	// Initialize the WebGL canvas
@@ -300,15 +298,6 @@ function DrawScene()
 	var mvp3 = MatrixMult( perspectiveMatrix, mv3 );
 	var nrmTrans3 = [ mv3[0],mv3[1],mv3[2], mv3[4],mv3[5],mv3[6], mv3[8],mv3[9],mv3[10] ];
 
-	var mv4  = GetModelViewMatrix( 0.8, -1,  0, transZ,-3.14/2,  rotY+0 );
-	var mvp4 = MatrixMult( perspectiveMatrix, mv4 );
-	var nrmTrans4 = [ mv4[0],mv4[1],mv4[2], mv4[4],mv4[5],mv4[6], mv4[8],mv4[9],mv4[10] ];
-
-	
-	
-	
-	
-	
 	// Clear the screen and the depth buffer.
 	gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT );
 	
@@ -321,7 +310,7 @@ function DrawScene()
 	
 	for (var i = 0; i< bubbleDrawers.length; i++){
 
-		var mv  = GetModelViewMatrix( tranbubble[i][3], tranbubble[i][0],  tranbubble[i][1]+ translateYbubble, transZ, rotX,   autorot+ rotY );
+		var mv  = GetModelViewMatrix( tranbubble[i][3], tranbubble[i][0],  tranbubble[i][1]+ translateYbubble, transZ, rotX,   autorot+ rotY+3.14 );
 		var mvp = MatrixMult( perspectiveMatrix, mv );
 		var nrmTrans = [ mv[0],mv[1],mv[2], mv[4],mv[5],mv[6], mv[8],mv[9],mv[10] ];
 	
