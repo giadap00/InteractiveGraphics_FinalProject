@@ -2,7 +2,7 @@
 # Deep Seabed - Interactive 3D WebGL Scene
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/09f130bc-06b0-464f-8cc4-43e697a2dcc2" width="700" autoplay loop muted></video>
+  <img src="https://github.com/user-attachments/assets/09f130bc-06b0-464f-8cc4-43e697a2dcc2" width="700" alt="Deep Seabed Preview">
 </div>
 
 ## 📖 Overview
