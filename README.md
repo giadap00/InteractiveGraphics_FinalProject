@@ -1,10 +1,8 @@
 # Deep Seabed - Interactive 3D WebGL Scene
 
-
-
-https://github.com/user-attachments/assets/42d47a92-65e9-4bbb-bfdc-0012933c69f7
-
-
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/42d47a92-65e9-4bbb-bfdc-0012933c69f7" width="700" autoplay loop muted></video>
+</div>
 
 ## 📖 Overview
 Deep Seabed is an interactive 3D graphics project built entirely from scratch using native **WebGL** and vanilla **JavaScript**. This project immerses the user in a deep underwater environment featuring a central stone portal, detailed craggy rock formations, and a sandy seabed. The scene is brought to life by dynamically generated jellyfish and rising bubbles that float upwards in a continuous, mesmerizing flow. 
@@ -31,6 +29,12 @@ The main goal of this project was to understand the core concepts of 3D computer
   <img src="https://github.com/user-attachments/assets/ccaf91e6-c74b-40c0-8896-a33f9791444c"
 width="45%" alt="Lighting adjustments">
 </p>
+
+## 📸 Screenshots
+
+| <img src="https://github.com/user-attachments/assets/32eb0024-f60e-4587-95f7-5848ce56e9a1" width="400"> | <img src="https://github.com/user-attachments/assets/ccaf91e6-c74b-40c0-8896-a33f9791444c" width="400"> |
+|:---:|:---:|
+| *Scene with Fog* | *Lighting adjustments* |
 
 ## 🛠️ Technologies Used
 * **HTML5 Canvas**
