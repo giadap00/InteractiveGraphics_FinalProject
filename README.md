@@ -26,12 +26,12 @@ calculated using trigonometric functions to create a smooth, continuous helical 
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/32eb0024-f60e-4587-95f7-5848ce56e9a1" width="45%" alt="Scene with Fog">
-  &nbsp; &nbsp; &nbsp;
-  <img src="https://github.com/user-attachments/assets/ccaf91e6-c74b-40c0-8896-a33f9791444c" width="45%" alt="Lighting adjustments">
+  <img src="INCOLLA_QUI_IL_LINK_DELLA_FOTO_1" width="45%">
+  &nbsp; &nbsp;
+  <img src="INCOLLA_QUI_IL_LINK_DELLA_FOTO_2" width="45%">
   <br>
   <i>Scene with Fog</i> 
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
   <i>Lighting adjustments</i>
 </p>
 
