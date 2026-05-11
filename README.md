@@ -34,6 +34,7 @@ calculated using trigonometric functions to create a smooth, continuous helical 
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
   <i>Lighting adjustments</i>
 </p>
+
 ## 🛠️ Technologies Used
 * **HTML5 Canvas**
 * **CSS3**
