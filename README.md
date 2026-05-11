@@ -1,7 +1,8 @@
+
 # Deep Seabed - Interactive 3D WebGL Scene
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/42d47a92-65e9-4bbb-bfdc-0012933c69f7" width="700" autoplay loop muted></video>
+  <video src="https://github.com/user-attachments/assets/09f130bc-06b0-464f-8cc4-43e697a2dcc2" width="700" autoplay loop muted></video>
 </div>
 
 ## 📖 Overview
@@ -10,7 +11,8 @@ Deep Seabed is an interactive 3D graphics project built entirely from scratch us
 The main goal of this project was to understand the core concepts of 3D computer graphics, custom shader programming, mathematical transformations, and interactive web rendering using strictly native WebGL, without relying on any external 3D libraries or engines.
 
 ## ✨ Key Features
-* **Mathematical Helical Animations:** The floating movement of both the jellyfish and the bubbles is calculated using trigonometric functions to create a smooth, continuous helical trajectory (a spiral-like upward movement), mimicking natural underwater physics.
+* **Mathematical Helical Animations:** The floating movement of both the jellyfish and the bubbles is 
+calculated using trigonometric functions to create a smooth, continuous helical trajectory (a spiral-like upward movement), mimicking natural underwater physics.
 * **Custom 3D Engine:** Built a lightweight 3D rendering pipeline from scratch to handle matrices, camera projections, and model-view transformations.
 * **Custom OBJ Loader:** Implemented a parser to read and load `.obj` files directly, handling vertex positions, texture coordinates, and normals.
 * **Interactive UI Controls:** A custom user interface allows real-time manipulation of the scene:
