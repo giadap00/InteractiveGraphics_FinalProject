@@ -24,9 +24,13 @@ The main goal of this project was to understand the core concepts of 3D computer
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/32eb0024-f60e-4587-95f7-5848ce56e9a1" width="45%" alt="Scene with Fog">
-  <img src="https://github.com/user-attachments/assets/ccaf91e6-c74b-40c0-8896-a33f9791444c" width="45%" alt="Lighting adjustments">
-  <p><i>Scene with Fog (Left) — Lighting adjustments (Right)</i></p>
+  <img src="https://github.com/user-attachments/assets/32eb0024-f60e-4587-95f7-5848ce56e9a1" width="700">
+  <p><i>Scene with Fog</i></p>
+
+  <br>
+
+  <img src="https://github.com/user-attachments/assets/ccaf91e6-c74b-40c0-8896-a33f9791444c" width="700">
+  <p><i>Lighting adjustments</i></p>
 </div>
 
 ## 🛠️ Technologies Used
